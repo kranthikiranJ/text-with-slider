@@ -15,7 +15,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center;
+    text-align: start;
   }
   .text{
     color: #000;
@@ -27,14 +27,15 @@
   .product-title {
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 38px;
+  color: #fff;
+  font-size: 46px;
   font-family: "Sofia Sans Condensed", sans-serif;
   text-align: left;
-  width: 400px;
+  width: 440px;
 }
 
 .product-title span {
-  font-size: 30px;
+  font-size: 34px;
   font-family: "Sofia Sans Condensed", sans-serif;
   text-align: left;
 }
@@ -45,12 +46,10 @@
 }
 
 /* Color the fifth and sixth words black */
-/* .product-title span:nth-child(n+5) {
+.product-title span:last-child {
   color: #000;
-} */
-.choose-us {
-    color: #000;
-  }
+}
+
   .product-description {
     font-size: 20px;
     font-family: "Poppins", sans-serif;
@@ -65,7 +64,9 @@
     font-family: "Poppins", sans-serif;
     text-align: left;
   }
-
+.choose-us{
+    color: #000;
+}
   .container{
     display: flex;
     flex-direction: row;
@@ -82,7 +83,6 @@
   }
   header {
     background-color: transparent; /* Initially transparent */
-    color: #fff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-around;
@@ -92,6 +92,7 @@
     top: 0;
     z-index: 999; /* Ensure header is always on top */
     transition: background-color 0.5s ease; /* Smooth transition for background color change */
+    margin-bottom: 10px;
   }
 
   .logo img {
@@ -190,7 +191,7 @@
   const productData = [
     {
       "id": "1",
-      "title": "<span>Exquisite Watches</span><br> <span>Gold Luxury,</span> <span class='choose-us'>Choose Us</span>",
+      "title": "Exquisite Watches<br> <span>Gold Luxury,</span> <span class='choose-us'>Choose Us</span>",
       "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
       "price": "$499",
       "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710917317/Group_4_1_z5bh1v.png",
@@ -199,7 +200,7 @@
     },
     {
       "id": "2",
-      "title": "<span>Dainty Timepieces</span><br> <span>Silver Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "title": "Dainty Timepieces<br> <span>Silver Luxury,</span><span class='choose-us'>Choose Us</span>",
       "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
       "price": "$469",
       "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_5_l8b5a5.png",
@@ -208,7 +209,7 @@
     },
     {
       "id": "3",
-      "title": "<span>Exquisite Watches</span><br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "title": "Exquisite Watches<br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
       "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
       "price": "$529",
       "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914415/Group_6_h5ezi2.png",
@@ -217,7 +218,7 @@
     },
     {
       "id": "4",
-      "title": "<span>Exquisite Watches</span><br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "title": "Exquisite Watches<br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
       "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
       "price": "$599",
       "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_7_hrxr3k.png",
@@ -245,10 +246,8 @@
           <p class="product-description">${product.description}</p>
           <p class="product-price">${product.price}</p>
           <div class="social-icons">
-        <a href="#"><img src="https://res.cloudinary.com/dqnqix89g/image/upload/v1710924393/fbb_nxpkrc.png" alt="Facebook" class="logo"></a>
-        <a href="#"><img src="https://res.cloudinary.com/dqnqix89g/image/upload/v1710924695/360_F_483369745_d9uQmdRaUGrZjuZC95rh10o64eYunK6c_ump8kp.jpg" alt="Twitter" class="logo"></a>
-        <a href="#"><img src="https://res.cloudinary.com/dqnqix89g/image/upload/v1710924403/yt_aaq7un.png" alt="YouTube" class="logo"></a>
-      </div>
+        <a href="#"><img src="https://res.cloudinary.com/dqnqix89g/image/upload/v1710926055/Frame_6_mpgwzn.png" alt="Facebook" class="logo"></a>
+          </div>
         </div>
       `;
       container1.appendChild(li);
