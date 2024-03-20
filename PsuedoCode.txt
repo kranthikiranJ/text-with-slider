@@ -1,0 +1,18 @@
+Start
+> we are working on a slider project to slide through products.
+> first lets create JSON data for the Products.
+> now lets create the layout for the website.
+> first create a header with logo on the left of header, and shop, brands,contact us, signup on to right of header.
+> now lets create the product section, using the json data.
+> lets use splide.js to make this project.
+> on the left half of the screen the product title, prodcut description,product price should be displayed.
+> on the right half of the screen the produvt images should be diesplayed.
+> using splide,js lets slide throught the images and product data.
+> lets sync the product images section and product content section.
+> now lets add background color to the website. for each product displayed on the screen, there  
+should be a corresponding background color.
+> lets sync the baclground color of the website with the slider.
+    when next image is selected, then the background color of the website should also change.
+> now lets add social media icons on the bottom of the product content.
+> Also, make the website responsive to all device screen sizes.
+End.

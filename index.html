@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel Project</title>
+
+<link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@3.0.9/dist/css/splide.min.css">
+<script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Additional CSS for product card styling */
+  .product-card {
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .product-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 38px;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  text-align: left;
+  width: 400px;
+}
+
+.product-title span {
+  font-size: 30px;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  text-align: left;
+}
+
+/* Color the first four words white */
+.product-title span:nth-child(-n+4) {
+  color: #fff;
+}
+
+/* Color the fifth and sixth words black */
+/* .product-title span:nth-child(n+5) {
+  color: #000;
+} */
+.choose-us {
+    color: #000;
+  }
+  .product-description {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .product-price {
+    font-size: 38px;
+    font-weight: bold;
+    color: #fff; /* Green color for price */
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+    height: 100vh;
+  }
+  .sign{
+    background-color: #000;
+    border: 1px solod #000;
+    border-radius: 12px;
+    padding: 8px;
+  }
+  header {
+    background-color: transparent; /* Initially transparent */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: fixed; /* Fixed positioning to always show the header */
+    top: 0;
+    z-index: 999; /* Ensure header is always on top */
+    transition: background-color 0.5s ease; /* Smooth transition for background color change */
+  }
+
+  .logo img {
+    height: 50px; /* Adjust height as needed */
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .splide__slide img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .splide__track, .splide__list {
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+  }
+
+  /* Hide carousel controls for product data section */
+  #section1 .splide__controls {
+    display: none;
+  }
+
+  /* Hide bottom carousel dot icons for product images section */
+  #section2 .splide__pagination {
+    display: none;
+  }
+
+  /* Display only left and right controls for product images */
+  #section2 .splide__arrow {
+    display: block;
+  }
+  .product-card{
+    /* background-color: transparent; */
+    height: 380px;
+
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://res.cloudinary.com/dqnqix89g/image/upload/v1710914398/Logo_xxrday.png" alt="Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Brands</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#" class="sign">Sign up</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+<div class="splide" id="section1">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <!-- Product cards will be added here dynamically -->
+    </ul>
+  </div>
+</div>
+
+<div class="splide" id="section2">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <!-- Product images will be added here dynamically -->
+    </ul>
+  </div>
+</div>
+</div>
+  
+<script>
+  const productData = [
+    {
+      "id": "1",
+      "title": "<span>Exquisite Watches</span><br> <span>Gold Luxury,</span> <span class='choose-us'>Choose Us</span>",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$499",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710917317/Group_4_1_z5bh1v.png",
+      'bg1':"#F4A764",
+      'bg2':"#FFDEC2",
+    },
+    {
+      "id": "2",
+      "title": "<span>Dainty Timepieces</span><br> <span>Silver Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
+      "price": "$469",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_5_l8b5a5.png",
+      'bg1':"#ADB0B0",
+      'bg2':"#E1E1E1",
+    },
+    {
+      "id": "3",
+      "title": "<span>Exquisite Watches</span><br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$529",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914415/Group_6_h5ezi2.png",
+      'bg1':"#30A357",
+      'bg2':"#75E39A",
+    },
+    {
+      "id": "4",
+      "title": "<span>Exquisite Watches</span><br> <span>Choose Luxury,</span><span class='choose-us'>Choose Us</span>",
+      "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
+      "price": "$599",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_7_hrxr3k.png",
+      'bg1':"#F24F4F",
+      'bg2':"#FFA895",
+    }
+  ];
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to set background color based on product index
+    function setBackgroundColor(index) {
+      const product = productData[index];
+      document.body.style.background = `linear-gradient(to right, ${product.bg1}, ${product.bg2})`;
+      header.style.background = `linear-gradient(to right, ${product.bg1}, ${product.bg2})`;
+    }
+
+    // Add product cards for section 1
+    const container1 = document.getElementById('section1').querySelector('.splide__list');
+    productData.forEach(product => {
+      const li = document.createElement('li');
+      li.classList.add('splide__slide');
+      li.innerHTML = `
+        <div class="product-card">
+          <h1 class="product-title">${product.title}</h1>
+          <p class="product-description">${product.description}</p>
+          <p class="product-price">${product.price}</p>
+          <div class="social-icons">
+        <a href="#"><img src="facebook_icon_url" alt="Facebook" class="logo"></a>
+        <a href="#"><img src="twitter_icon_url" alt="Twitter"></a>
+        <a href="#"><img src="youtube_icon_url" alt="YouTube"></a>
+      </div>
+        </div>
+      `;
+      container1.appendChild(li);
+    });
+
+    // Add product images for section 2
+    const container2 = document.getElementById('section2').querySelector('.splide__list');
+    productData.forEach(product => {
+      const li = document.createElement('li');
+      li.classList.add('splide__slide');
+      li.innerHTML = `<img src="${product.imageUrl}" alt="${product.title}" class="img">`;
+      container2.appendChild(li);
+    });
+
+    // Initialize the main Splide slider for section 1
+    var splide1 = new Splide('#section1', {
+      type: 'slide',
+      perPage: 1,
+      autoplay: true,
+      pauseOnHover: false,
+      gap: 10,
+      rewind:true,
+      pagination: false, // Hide pagination controls
+      arrows: false, // Hide arrow controls
+    }).mount();
+
+    // Initialize the secondary Splide slider for section 2
+    var splide2 = new Splide('#section2', {
+      type: 'slide',
+      perPage: 1,
+      autoplay: true,
+      pauseOnHover: false,
+      gap: 10,
+      rewind:true,
+    });
+
+    // Synchronize the secondary slider with the main slider
+    splide2.sync(splide1).mount();
+
+    // Change background color when slide changes
+    splide1.on('moved', function (newIndex) {
+      setBackgroundColor(newIndex);
+    });
+
+    // Set initial background color
+    setBackgroundColor(0);
+  });
+</script>
+
+</body>
+</html>

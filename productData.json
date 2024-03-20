@@ -1,0 +1,50 @@
+
+ const logo = "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914398/Logo_xxrday.png";
+ const leftArrow=  "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914397/Left_arrow_jpbnyb.png";
+ const rightArrow="https://res.cloudinary.com/dqnqix89g/image/upload/v1710914397/Left_arrow_jpbnyb.png";
+// img1:"https://res.cloudinary.com/dqnqix89g/image/upload/v1710914401/Group_4_fbprkf.png",
+// img2 : "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_5_l8b5a5.png",
+// img3:"https://res.cloudinary.com/dqnqix89g/image/upload/v1710914415/Group_6_h5ezi2.png",
+// img4:"https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_7_hrxr3k.png",
+
+
+const productData = [
+    {
+      "id": "1",
+      "title": "Exquisite Watches Gold Luxury,Choose Us",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$499",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710917317/Group_4_1_z5bh1v.png",
+      'bg1':"#F4A764",
+      'bg2':"#FFDEC2",
+    },
+    {
+      "id": "2",
+      "title": "Dainty Timepieces Silver Luxury,Choose Us",
+      "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
+      "price": "$469",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_5_l8b5a5.png",
+      'bg1':"#ADB0B0",
+      'bg2':"#E1E1E1",
+    },
+    {
+      "id": "3",
+      "title": "Exquisite Watches Choose Luxury,Choose Us",
+      "description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+      "price": "$529",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914415/Group_6_h5ezi2.png",
+      'bg1':"#30A357",
+      'bg2':"#75E39A",
+      
+    },
+    {
+      "id": "4",
+      "title": "Exquisite Watches Choose Luxury,Choose Us",
+      "description": "Explore the Ideal Timepiece for Any Moment and Enhance Your Style with Timeless Sophistication and Impeccable Craftsmanship - timepiece",
+      "price": "$599",
+      "imageUrl": "https://res.cloudinary.com/dqnqix89g/image/upload/v1710914400/Group_7_hrxr3k.png",
+      'bg1':"#F24F4F",
+      'bg2':"##FFA895",
+    }
+  ]
+  
