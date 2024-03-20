@@ -18,6 +18,13 @@ body {
     height: 480px;
     
   }
+  .logo{
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+  }
   /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
     .container {
